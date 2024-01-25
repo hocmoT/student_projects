@@ -7,9 +7,6 @@ int main(){
 	float spal;
 	float spal1;
 	float trasa;
-	int zbiornik;
-	zbiornik = 50;
-	int tank;
 	float cena;
 	float koszt;
 	float osoby;
@@ -25,14 +22,12 @@ int main(){
 	spal1 = trasa*spal/100;
 	koszt = spal1*cena;
 	koszt_osoby = koszt/osoby;
-	tank =zbiornik/spal1;
+	
 	cout<<"Koszt za osobe to "<<koszt_osoby<<endl;
-	cout<<"Ilosc tankowan to "<<tank<<endl;
 
 	fstream plik;
 	plik.open("dane.txt", ios::out);
 	plik<<"Koszt za osobe to "<<koszt_osoby<<endl;
-	plik<<"Ilosc tankowan to "<<tank<<endl;
 	plik.close();
 	return 0;
 }
